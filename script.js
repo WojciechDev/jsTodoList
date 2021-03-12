@@ -8,6 +8,8 @@ const ul = document.querySelector('ul');
 const searchTaskInput = document.querySelector('.input2');
 // list array
 let liArr = [];
+// list of filtered array
+let listFiltered = [];
 
 // function which add tasks to list
 const addTask = (e) => {
@@ -28,9 +30,13 @@ const addTask = (e) => {
 // function which search certain tasks
 const searchTask = () => {
   const searchText = searchTaskInput.value;
-  liArr = liArr.filter((li) => li.textContent.includes(searchText));
-  ul.textContent = '';
-  liArr.forEach((li) => ul.appendChild(li));
+  if (searchText.length > 0) {
+    listFiltered = liArr.filter((li) => li.textContent.includes(searchText));
+    ul.textContent = '';
+    listFiltered.forEach((li) => ul.appendChild(li));
+  } else {
+    liArr.forEach((li) => ul.appendChild(li));
+  }
 };
 
 // adding tasks to list
