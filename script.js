@@ -31,7 +31,9 @@ const addTask = (e) => {
 const searchTask = () => {
   const searchText = searchTaskInput.value;
   if (searchText.length > 0) {
-    listFiltered = liArr.filter((li) => li.textContent.includes(searchText));
+    listFiltered = liArr.filter((li) =>
+      li.textContent.toLowerCase().includes(searchText.toLowerCase())
+    );
     ul.textContent = '';
     listFiltered.forEach((li) => ul.appendChild(li));
   } else {
