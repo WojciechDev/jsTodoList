@@ -17,7 +17,7 @@ const addTask = (e) => {
   const titleTask = addTaskInput.value;
   if (!(titleTask == '')) {
     const task = document.createElement('li');
-    task.innerHTML = titleTask;
+    task.innerHTML = titleTask + "<button>Delete</button>";
     ul.appendChild(task);
     liArr.push(task);
     console.log(liArr);
@@ -41,8 +41,19 @@ const searchTask = () => {
   }
 };
 
+// function which remove tasks
+// const removeTask = (e) => {
+//     e.preventDefault();
+//     const titleTask = addTaskInput.value;
+//     liArr.pop(titleTask);
+    
+// }
+
 // adding tasks to list
 addBtn.addEventListener('click', addTask);
 
 // searching filtered tasks
 searchTaskInput.addEventListener('input', searchTask);
+
+
+// document.querySelectorAll('li button').forEach(li => li.addEventListener('click', removeTask));
