@@ -20,7 +20,9 @@ const addTask = (e) => {
     liArr.push(task);
     console.log(liArr);
     addTaskInput.value = '';
-  } else alert('Your task is empty string!');
+  } else {
+    alert('Your task is empty string!');
+  }
 };
 
 // function which search certain tasks
