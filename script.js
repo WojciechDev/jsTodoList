@@ -1,12 +1,12 @@
-//download input for adding tasks
+// download input for adding tasks
 const addTaskInput = document.querySelector('.input1');
-//download button which confirm adding tasks
+// download button which confirm adding tasks
 const addBtn = document.querySelector('.addBtn');
-//download ul to which will be added tasks
+// download ul to which will be added tasks
 const ul = document.querySelector('ul');
-//download input for searching tasks
+// download input for searching tasks
 const searchTaskInput = document.querySelector('.input2');
-//li array
+// list array
 let liArr = [];
 
 // function which add tasks to list
@@ -31,8 +31,8 @@ const searchTask = () => {
   liArr.forEach((li) => ul.appendChild(li));
 };
 
-//adding tasks to list
+// adding tasks to list
 addBtn.addEventListener('click', addTask);
 
-//searching filtered tasks
+// searching filtered tasks
 searchTaskInput.addEventListener('input', searchTask);
