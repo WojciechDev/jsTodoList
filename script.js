@@ -19,9 +19,8 @@ const addTask = (e) => {
     const task = document.createElement('li');
     task.innerHTML = titleTask;
     liArr.push(task);
-    if(liArr.length <= 5){
+    if(liArr.length <= 10){
     ul.appendChild(task);
-    // console.log(liArr);
     addTaskInput.value = '';
     }else{
       console.log('1');
@@ -44,12 +43,6 @@ const searchTask = () => {
     liArr.forEach((li) => ul.appendChild(li));
   }
 };
-
-// function which remove tasks
-// const removeTask = (e) => {
-//     e.preventDefault();
-//     listFiltered.forEach(li => )
-// }
 
 // adding tasks to list
 addBtn.addEventListener('click', addTask);
