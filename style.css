@@ -1,0 +1,68 @@
+*{
+    font-family: 'DotGothic16', sans-serif;
+    color: pink;
+}
+
+body{
+    /* background-image: linear-gradient(purple,pink); */
+    background-color: black;
+}
+.view{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height:600px;
+    width:1100px;
+    background-color: black;
+    border: 3px solid pink;
+    /* border-radius: 30%; */
+}
+
+.view form{
+    position: absolute;
+    top:35%;
+    left:35%;
+    transform: translateX(-50%);
+}
+
+.view label{
+    font-size: 30px;
+}
+
+.view h1{
+    position: absolute;
+    top:5%;
+    left:50%;
+    transform: translateX(-50%);
+
+}
+
+ul{
+    position: absolute;
+    top:50%;
+    left:25%;
+
+}
+
+input{
+    background-color: pink;
+    color:black;
+}
+
+.secondInput{
+    display: inline;
+    margin-left: 30px;
+}
+
+.addBtn{
+    border-color:black;
+    background-color: black;
+    color:pink;
+    transition: .2s;
+}
+
+.addBtn:hover{
+    background-color: pink;
+    color: black;
+}

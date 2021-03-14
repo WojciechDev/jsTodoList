@@ -17,11 +17,15 @@ const addTask = (e) => {
   const titleTask = addTaskInput.value;
   if (!(titleTask == '')) {
     const task = document.createElement('li');
-    task.innerHTML = titleTask + "<button>Delete</button>";
-    ul.appendChild(task);
+    task.innerHTML = titleTask;
     liArr.push(task);
-    console.log(liArr);
+    if(liArr.length <= 5){
+    ul.appendChild(task);
+    // console.log(liArr);
     addTaskInput.value = '';
+    }else{
+      console.log('1');
+    }
   } else {
     alert('Your task is empty string!');
   }
@@ -44,9 +48,7 @@ const searchTask = () => {
 // function which remove tasks
 // const removeTask = (e) => {
 //     e.preventDefault();
-//     const titleTask = addTaskInput.value;
-//     liArr.pop(titleTask);
-    
+//     listFiltered.forEach(li => )
 // }
 
 // adding tasks to list
@@ -54,6 +56,3 @@ addBtn.addEventListener('click', addTask);
 
 // searching filtered tasks
 searchTaskInput.addEventListener('input', searchTask);
-
-
-// document.querySelectorAll('li button').forEach(li => li.addEventListener('click', removeTask));
